@@ -9,6 +9,7 @@ public class Transformer {
      * Constructor
      * Initialize the Transformer with the name to replace "Chuck Norris" with
      * and the number of words per line to use when wrapping the text.
+     *
      * @param newName         the name to replace "Chuck Norris" with
      * @param numWordsPerLine the number of words per line to use when wrapping the text
      */
@@ -19,6 +20,7 @@ public class Transformer {
 
     /**
      * Replace all occurrences of "Chuck Norris" with the name given in the constructor.
+     *
      * @param source the string to transform
      * @return the transformed string
      */
@@ -28,6 +30,7 @@ public class Transformer {
 
     /**
      * Capitalize the first letter of each word in the string.
+     *
      * @param source the string to transform
      * @return the transformed string
      */
@@ -42,6 +45,7 @@ public class Transformer {
     /**
      * Wrap the text so that there are at most numWordsPerLine words per line.
      * Number the lines starting at 1.
+     *
      * @param source the string to transform
      * @return the transformed string
      */
@@ -63,7 +67,8 @@ public class Transformer {
                     wrapped.append(" ");
                 }
             }
-            wrapped.append("\n");
+            if(wrapped.lastIndexOf("\n") != wrapped.length() - 1)
+                wrapped.append("\n");
         }
 
         return wrapped.toString();
